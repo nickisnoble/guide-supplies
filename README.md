@@ -1,111 +1,42 @@
-# sapper-template
+# Guide Supplies
 
-The default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
+Guide Supplies is a collection of tools and generators to help guides (game masters) run Quest games.
 
+## What is Quest?
 
-## Getting started
+[Quest](https://www.adventure.game?ref=guide-supplies) is a new RPG from the Adventure Guild. If you've never played a table top role playing game before, and you've always wanted to, Quest is the best place to start.
 
+You can [learn the basics for free](https://www.adventure.game/basic-rules?ref=guide-supplies) or [buy the full game](https://www.adventure.game/store?ref=guide-supplies) on Adventure Guild's site.
 
-### Using `degit`
-
-[`degit`](https://github.com/Rich-Harris/degit) is a scaffolding tool that lets you create a directory from a branch in a repository. Use either the `rollup` or `webpack` branch in `sapper-template`:
-
-```bash
-# for Rollup
-npx degit "sveltejs/sapper-template#rollup" my-app
-# for webpack
-npx degit "sveltejs/sapper-template#webpack" my-app
-```
+*Disclaimer: Guide Supplies is not affiliated with or endorsed by the Adventure Guild in any way. I just love what they've created, and wanted to add to the community!*
 
 
-### Using GitHub templates
+## Contributions & Suggestions
 
-Alternatively, you can use GitHub's template feature with the [sapper-template-rollup](https://github.com/sveltejs/sapper-template-rollup) or [sapper-template-webpack](https://github.com/sveltejs/sapper-template-webpack) repositories.
+There are many ways to contribute to Guide Supplies, even if you don't code!
 
+I'm open to anything (just open an issue!), but here are a few ideas:
 
-### Running the project
+- Additional table content / lore (ideal format is a spreadsheet)
+- Ideas for new tools
+- Code / site improvements
+- Art or illustrations
 
-However you get the code, you can install dependencies and run the project in development mode with:
-
-```bash
-cd my-app
-npm install # or yarn
-npm run dev
-```
-
-Open up [localhost:3000](http://localhost:3000) and start clicking around.
-
-Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
+I will never charge for access to the site, especially since the content is borrowed with permission. That being said, I accept donations which go toward hosting + domain costs... and coffee while I'm coding. Cashapp / venmo $nickisnoble.
 
 
-## Structure
+## Other Systems
 
-Sapper expects to find two directories in the root of your project —  `src` and `static`.
+While these tools are built with Quest in mind, they could also be useful for other TTRPG systems, like D&D 5E.
 
+## Special thanks and credits
 
-### src
+First and foremost, thank you to @tc and everyone at Adventure Guild for making the best and most accessible TTRPG ever.
 
-The [src](src) directory contains the entry points for your app — `client.js`, `server.js` and (optionally) a `service-worker.js` — along with a `template.html` file and a `routes` directory.
+[/r/BehindTheTables](https://www.reddit.com/r/BehindTheTables/comments/5ruebp/new_rules_for_behindthetables/) is a wonderful source for game system agnostic tables. I used a few of these, as well as a healthy dose of original material.
 
+[DonJon](https://donjon.bin.sh/) was a big inspiration for these sorts of tools and the code behind them. Amazing site.
 
-#### src/routes
-
-This is the heart of your Sapper app. There are two kinds of routes — *pages*, and *server routes*.
-
-**Pages** are Svelte components written in `.svelte` files. When a user first visits the application, they will be served a server-rendered version of the route in question, plus some JavaScript that 'hydrates' the page and initialises a client-side router. From that point forward, navigating to other pages is handled entirely on the client for a fast, app-like feel. (Sapper will preload and cache the code for these subsequent pages, so that navigation is instantaneous.)
-
-**Server routes** are modules written in `.js` files, that export functions corresponding to HTTP methods. Each function receives Express `request` and `response` objects as arguments, plus a `next` function. This is useful for creating a JSON API, for example.
-
-There are three simple rules for naming the files that define your routes:
-
-* A file called `src/routes/about.svelte` corresponds to the `/about` route. A file called `src/routes/blog/[slug].svelte` corresponds to the `/blog/:slug` route, in which case `params.slug` is available to the route
-* The file `src/routes/index.svelte` (or `src/routes/index.js`) corresponds to the root of your app. `src/routes/about/index.svelte` is treated the same as `src/routes/about.svelte`.
-* Files and directories with a leading underscore do *not* create routes. This allows you to colocate helper modules and components with the routes that depend on them — for example you could have a file called `src/routes/_helpers/datetime.js` and it would *not* create a `/_helpers/datetime` route
+And last, but not least, my adventuring party: David, Ali, Rachel, Matt, and Andrew. Thank you for your help generating the original lore here, as well as the endless fun and inspiration from our games. A round of warm milk for all. \[*Edit:* Yes, this is an inside joke.\]
 
 
-### static
-
-The [static](static) directory contains any static assets that should be available. These are served using [sirv](https://github.com/lukeed/sirv).
-
-In your [service-worker.js](src/service-worker.js) file, you can import these as `files` from the generated manifest...
-
-```js
-import { files } from '@sapper/service-worker';
-```
-
-...so that you can cache them (though you can choose not to, for example if you don't want to cache very large files).
-
-
-## Bundler config
-
-Sapper uses Rollup or webpack to provide code-splitting and dynamic imports, as well as compiling your Svelte components. With webpack, it also provides hot module reloading. As long as you don't do anything daft, you can edit the configuration files to add whatever plugins you'd like.
-
-
-## Production mode and deployment
-
-To start a production version of your app, run `npm run build && npm start`. This will disable live reloading, and activate the appropriate bundler plugins.
-
-You can deploy your application to any environment that supports Node 10 or above. As an example, to deploy to [Vercel Now](https://vercel.com) when using `sapper export`, run these commands:
-
-```bash
-npm install -g now
-now
-```
-
-If your app can't be exported to a static site, you can use the [now-sapper](https://github.com/thgh/now-sapper) builder. You can find instructions on how to do so in its [README](https://github.com/thgh/now-sapper#basic-usage).
-
-
-## Using external components
-
-When using Svelte components installed from npm, such as [@sveltejs/svelte-virtual-list](https://github.com/sveltejs/svelte-virtual-list), Svelte needs the original component source (rather than any precompiled JavaScript that ships with the component). This allows the component to be rendered server-side, and also keeps your client-side app smaller.
-
-Because of that, it's essential that the bundler doesn't treat the package as an *external dependency*. You can either modify the `external` option under `server` in [rollup.config.js](rollup.config.js) or the `externals` option in [webpack.config.js](webpack.config.js), or simply install the package to `devDependencies` rather than `dependencies`, which will cause it to get bundled (and therefore compiled) with your app:
-
-```bash
-npm install -D @sveltejs/svelte-virtual-list
-```
-
-
-## Bugs and feedback
-
-Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
