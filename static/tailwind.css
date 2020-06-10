@@ -1,0 +1,24 @@
+@tailwind base;
+
+h1 {
+  @apply text-4xl leading-tight font-display;
+}
+
+h2 {
+  @apply text-3xl leading-tight font-heading;
+}
+
+h3 {
+  @apply text-xl leading-snug font-heading;
+}
+
+p {
+  @apply text-lg leading-normal font-body;
+}
+
+a {
+  @apply text-blue-600 underline;
+}
+
+@tailwind components;
+@tailwind utilities;
