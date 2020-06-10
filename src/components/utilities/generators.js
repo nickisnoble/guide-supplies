@@ -1,4 +1,4 @@
-import roll from './roll.js'
+import { d, roll } from './dice'
 
 const syllables  = [
   [ "",    "Uth",  "Cela", "E",   "A",   "Be",  "De",  "El",  "Fa",  "Jo",  "Ki",   "La",    "Ma",   "Na",   "O",    "Pa",  "Re",   "Si",  "Ta", "Va"   ],
@@ -7,7 +7,6 @@ const syllables  = [
 ];
 
 function generateName(){
-  
   let n = "";
     
   // For each row in syllables table
@@ -21,4 +20,11 @@ function generateName(){
   return n[0].toUpperCase() + n.slice(1);
 }
 
-export default generateName;
+function generateColor() {
+  return `hsla(${ d(360) }, 75%, 40%, 1)`
+}
+
+export { 
+  generateName,
+  generateColor
+};

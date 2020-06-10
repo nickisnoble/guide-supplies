@@ -1,9 +1,12 @@
-import d from './die.js'
-import roll from './roll.js'
-import generateName from './name.js'
+import { d, roll } from './dice.js'
+import { 
+  generateName,
+  generateColor 
+} from './generators.js'
 
 export {
   d,
   roll,
-  generateName
+  generateName,
+  generateColor
 };
