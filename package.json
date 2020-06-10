@@ -16,6 +16,7 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "compression": "^1.7.1",
+    "hsluv": "^0.1.0",
     "polka": "next",
     "sirv": "^0.4.0"
   },

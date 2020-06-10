@@ -1,4 +1,5 @@
 import { d, roll } from './dice'
+import { hsluvToHex } from 'hsluv'
 
 const syllables  = [
   [ "",    "Uth",  "Cela", "E",   "A",   "Be",  "De",  "El",  "Fa",  "Jo",  "Ki",   "La",    "Ma",   "Na",   "O",    "Pa",  "Re",   "Si",  "Ta", "Va"   ],
@@ -21,7 +22,7 @@ function generateName(){
 }
 
 function generateColor() {
-  return `hsla(${ d(360) }, 75%, 40%, 1)`
+  return hsluvToHex([ d(360), 75, 50]);
 }
 
 export { 
