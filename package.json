@@ -3,22 +3,23 @@
   "description": "Tools & generators for the Quest game system",
   "version": "0.0.1",
   "scripts": {
-    "dev": "sapper dev",
-    "export": "sapper export --legacy",
-    "start": "node __sapper__/build",
-    "cy:run": "cypress run",
-    "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run",
+    "dev": "run-p start:dev watch:tailwind",
+    "build": "npm run build:tailwind && sapper build --legacy",
     "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
     "build:tailwind": "NODE_ENV=production postcss static/tailwind.css -o static/index.css",
-    "build": "npm run build:tailwind && sapper build --legacy"
+    "export": "sapper export --legacy",
+    "start": "node __sapper__/build",
+    "start:dev": "sapper dev",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "compression": "^1.7.1",
     "hsluv": "^0.1.0",
     "polka": "next",
-    "sirv": "^0.4.0"
+    "sirv": "^0.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
