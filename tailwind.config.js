@@ -15,7 +15,8 @@ module.exports = {
       xl:    '24px',
       '2xl': '30px',
       '3xl': '40px',
-      '4xl': '80px'
+      '4xl': '80px',
+      '5xl': '120px'
     },
     spacing: {
       '1': '6.5px',

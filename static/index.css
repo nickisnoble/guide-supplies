@@ -6037,6 +6037,10 @@ a {
   font-size: 80px;
 }
 
+.text-5xl {
+  font-size: 120px;
+}
+
 .leading-3 {
   line-height: .75rem;
 }
@@ -17975,6 +17979,10 @@ a {
 
   .sm\:text-4xl {
     font-size: 80px;
+  }
+
+  .sm\:text-5xl {
+    font-size: 120px;
   }
 
   .sm\:leading-3 {
@@ -29918,6 +29926,10 @@ a {
     font-size: 80px;
   }
 
+  .md\:text-5xl {
+    font-size: 120px;
+  }
+
   .md\:leading-3 {
     line-height: .75rem;
   }
@@ -41859,6 +41871,10 @@ a {
     font-size: 80px;
   }
 
+  .lg\:text-5xl {
+    font-size: 120px;
+  }
+
   .lg\:leading-3 {
     line-height: .75rem;
   }
@@ -53798,6 +53814,10 @@ a {
 
   .xl\:text-4xl {
     font-size: 80px;
+  }
+
+  .xl\:text-5xl {
+    font-size: 120px;
   }
 
   .xl\:leading-3 {

@@ -5,8 +5,12 @@
 
 import Intro from './Intro.svelte';
 import ToolSection from './ToolSection.svelte';
+import Button from './Button.svelte';
+import Display from './Display.svelte';
 
 export { 
   Intro,
-  ToolSection
+  ToolSection,
+  Button,
+  Display,
 };

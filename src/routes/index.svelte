@@ -1,6 +1,7 @@
 <script>
   import { Intro, ToolSection } from '../components/site'
   import { generateName, generateColor } from '../components/utilities'
+  import { D20 } from '../components/tools'
 </script>
 
 
@@ -13,6 +14,10 @@
   <p class="text-xl mt-3">Tools for running games with the <a href="https://www.adventure.game?ref=guide-tools">Quest</a> TTRPG game system.</p>
 </Intro>
 
-<ToolSection tool={Intro}>
-  <h2>player character</h2>
+<ToolSection tool={D20}>
+  <h2>twenty-sided die</h2>
+  <p>
+    In Quest, the only die you need is a trusty twenty-sided. to let fate decide what happens next. As the Guide, you can ask players to roll when they try to do something risky, or when a bit of chance makes things more fun. 
+  </p>
+  <p><a href="https://www.adventure.game/chance?ref=guide-tools">Learn more about chance in Quest</a></p>
 </ToolSection>
