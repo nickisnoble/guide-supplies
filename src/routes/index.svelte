@@ -17,7 +17,7 @@
 <ToolSection tool={D20}>
   <h2>twenty-sided die</h2>
   <p>
-    In Quest, the only die you need is a trusty twenty-sided. to let fate decide what happens next. As the Guide, you can ask players to roll when they try to do something risky, or when a bit of chance makes things more fun. 
+    In Quest, the only die you need is a trusty twenty-sided. As the Guide, you can ask players to roll when they try to do something risky, or when introducing a bit of chance makes things more fun.
   </p>
-  <p><a href="https://www.adventure.game/chance?ref=guide-supplies">Learn more about chance in Quest</a></p>
+  <p><a href="https://www.adventure.game/chance?ref=guide-supplies">Learn more about die rolls in Quest</a></p>
 </ToolSection>
