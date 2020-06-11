@@ -11,7 +11,7 @@
 
 <Intro>
   <h1>Guide Supplies</h1>
-  <p class="text-xl mt-3">Tools for running games with the <a href="https://www.adventure.game?ref=guide-supplies">Quest</a> TTRPG game system.</p>
+  <p class="text-xl mt-3">Tools for running games with <a href="https://www.adventure.game?ref=guide-supplies">Quest</a>.</p>
 </Intro>
 
 <ToolSection tool={D20}>
