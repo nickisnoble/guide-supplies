@@ -6,11 +6,11 @@
 
 
 <svelte:head>
-	<title>Guide Tools</title>
+	<title>Guide Supplies</title>
 </svelte:head>
 
 <Intro>
-  <h1>Guide Tools</h1>
+  <h1>Guide Supplies</h1>
   <p class="text-xl mt-3">Tools for running games with the <a href="https://www.adventure.game?ref=guide-supplies">Quest</a> TTRPG game system.</p>
 </Intro>
 
