@@ -1,5 +1,4 @@
 <script>
-  import { d } from '../utilities'
   import { Display, Roller, ToolSection } from '../site'
 
   let result = 10;

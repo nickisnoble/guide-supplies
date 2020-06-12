@@ -1,7 +1,6 @@
 <script>
   import { Intro } from '../components/site'
-  import { generateName, generateColor } from '../components/utilities'
-  import { D20 } from '../components/tools'
+  import { D20, Namer } from '../components/tools'
 </script>
 
 
@@ -18,5 +17,6 @@
 <div class="divide-y divide-gray">
 
   <D20/>
+  <Namer/>
 
 </div>
