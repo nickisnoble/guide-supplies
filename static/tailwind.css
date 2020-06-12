@@ -17,11 +17,11 @@ p {
 }
 
 a {
-  @apply font-heading lowercase transition-colors duration-300;
+  @apply font-heading lowercase transition duration-300 border-b border-opacity-25;
 }
 
 a:hover {
-  @apply text-yellow-500;
+  @apply text-gold border-opacity-75;
 }
 
 @tailwind components;

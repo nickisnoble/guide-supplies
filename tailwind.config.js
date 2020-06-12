@@ -5,7 +5,7 @@ module.exports = {
     fontFamily: {
       display: ['Alegreya', 'serif'],
       heading: ['"Alegreya Sans SC"', 'sans-serif'],
-      body: ['Ovo', 'serif'],
+      body:    ['Ovo', 'serif'],
     },
     fontSize: {
       xs:    '12px',
@@ -28,6 +28,12 @@ module.exports = {
       '7': '112px',
       '8': '130px',
       '9': '160px',
+    },
+    colors: {
+      'gold':  '#F5A623',
+      'black': '#000',
+      'white': '#fff',
+      'gray':  '#eaecef'
     }
   },
   variants: {},
