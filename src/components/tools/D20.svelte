@@ -1,8 +1,13 @@
 <script>
   import { d } from '../utilities'
-  import { Display, Button, ToolSection } from '../site'
+  import { Display, Roller, ToolSection } from '../site'
 
-  $: result = d(20);
+  let result = 10;
+
+  const handleRoll = (event) => 
+    result = event.detail.result
+
+
   $: consequence =
     result === 20 ? 
       "triumph" :
@@ -19,8 +24,6 @@
     // Otherwise...
       "failure"
 
-
-  const roll = () => result = d(20);
 </script>
 
 <ToolSection>
@@ -37,7 +40,7 @@
     <h1 class="text-5xl leading-none">{result}</h1>
     <h3 class="mb-3 leading-none">{consequence}</h3>
 
-    <Button label="reroll" handler={roll}></Button>
+    <Roller on:roll={ handleRoll } />
   </Display>
 
 </ToolSection>

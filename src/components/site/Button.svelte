@@ -1,6 +1,6 @@
 <script>
-  export let handler;
-  export let label;
+  export let handler = () => console.log('click');
+  export let label = "Click Here";
 </script>
 
 <button 
