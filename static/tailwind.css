@@ -5,19 +5,23 @@ h1 {
 }
 
 h2 {
-  @apply text-3xl leading-tight font-heading;
+  @apply text-3xl leading-tight font-heading lowercase;
 }
 
 h3 {
-  @apply text-xl leading-snug font-heading;
+  @apply text-xl leading-snug font-heading lowercase;
 }
 
 p {
-  @apply text-lg leading-normal font-body;
+  @apply leading-normal font-body;
 }
 
 a {
-  @apply text-blue-600 underline;
+  @apply font-heading lowercase transition-colors duration-300;
+}
+
+a:hover {
+  @apply text-yellow-500;
 }
 
 @tailwind components;
