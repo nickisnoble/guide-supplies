@@ -1,6 +1,6 @@
 <script>
   import { d } from '../utilities'
-  import { Display, Button } from '../site'
+  import { Display, Button, ToolSection } from '../site'
 
   $: result = d(20);
   $: consequence =
@@ -23,9 +23,21 @@
   const roll = () => result = d(20);
 </script>
 
-<Display>
-  <h1 class="text-5xl leading-none">{result}</h1>
-  <h3 class="mb-3 leading-none">{consequence}</h3>
+<ToolSection>
 
-  <Button label="reroll" handler={roll}></Button>
-</Display>
+  <div slot="description" class="space-y-3">
+    <h2>twenty-sided die</h2>
+    <p>
+      In Quest, the only die you need is a trusty twenty-sided. As the Guide, you can ask players to roll when they try to do something risky, or when introducing a bit of chance makes things more fun.
+    </p>
+    <p><a href="https://www.adventure.game/chance?ref=guide-supplies">Learn more about die rolls in Quest</a></p>
+  </div>
+
+  <Display>
+    <h1 class="text-5xl leading-none">{result}</h1>
+    <h3 class="mb-3 leading-none">{consequence}</h3>
+
+    <Button label="reroll" handler={roll}></Button>
+  </Display>
+
+</ToolSection>

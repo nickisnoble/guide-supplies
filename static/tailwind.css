@@ -1,5 +1,9 @@
 @tailwind base;
 
+body {
+  @apply text-base leading-normal font-body;
+}
+
 h1 {
   @apply text-4xl leading-tight font-display;
 }
@@ -10,10 +14,6 @@ h2 {
 
 h3 {
   @apply text-xl leading-snug font-heading lowercase;
-}
-
-p {
-  @apply leading-normal font-body;
 }
 
 a {
