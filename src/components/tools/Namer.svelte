@@ -15,7 +15,7 @@
   </div>
 
   <Display>
-    <h1 class="text-5xl leading-snug">{name}</h1>
+    <h1 class="text-3xl md:text-5xl leading-snug">{name}</h1>
     <Button handler={ () => name = generateName() } label="Another!" />
   </Display>
 
