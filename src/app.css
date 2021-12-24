@@ -1,4 +1,19 @@
-/* Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans+SC:wght@400;500&family=Ovo&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-base leading-normal font-body;
+  }
+
+  a {
+    @apply transition duration-300 border-b border-opacity-25;
+  }
+
+  a:hover {
+    @apply text-gold border-opacity-75;
+  }
+}
